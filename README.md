@@ -12,6 +12,7 @@ $(function() {
     $('#basic-use-example').append(widget.$el);  
     widget.render();
 });
+```
 
 
 ## API
