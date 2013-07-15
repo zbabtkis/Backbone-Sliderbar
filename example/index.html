@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width' />
+    
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    
+    <link rel='stylesheet' type='text/css' href='./css/tomorrow-night-eighties.css' />
+    <link rel='stylesheet' type='text/css' href='../components/bootstrap/docs/assets/css/bootstrap.css' />
+    <link rel='stylesheet' type='text/css' href='../components/bootstrap/docs/assets/css/bootstrap-responsive.css' />
+    <link rel='stylesheet' type='text/css' href='../backbone.sliderbar.css' />
+</head>
+<body>
+    
+    <div class='container'>
+        <div class='navbar'>
+            <div class='navbar-inner'>
+                <div class='container'>
+                    <a class='btn btn-navbar' data-toggle='collapse' data-target='.nav-collapse'>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                    </a>
+                    <a class='brand'>Backbone Sliderbar</a>
+                    <div class='nav-collapse collapse'>
+                        <ul class='nav'>
+                            <li><a href='#intro'>Intro</a></li>
+                            <li><a href='#basic-use'>Basic Use</a></li>
+                            <li><a href='#api'>API</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='intro' class='hero-unit'>
+            <h1>Backbone Sliderbar</h1>
+            Backbone Sliderbar is an easy to use, responsive slider that allows users to quickly select a value by just dragging thier mouse.
+        </div>
+        <div id='basic-use' class='well'>
+            <h2>Basic Use</h2>
+            Use this...
+            <pre class='prettyprint'>
+var widget = new SliderBar({id: 'main-slider'});
+        
+$(function() {
+    $('#basic-use-example').append(widget.$el);  
+    widget.render();
+});
+</pre>
+            <div class='example'></div>
+        </div>
+
+        <div id='api' class='well'>
+            <h2>API</h2>
+            <section id='get-value' class='clearfix'>
+                <h3>Get Value</h3>
+                <pre class='prettyprint'>&lt;button class='btn'&gt;Get Value&lt;/button&gt;</pre>
+                <pre class='prettyprint'>
+$('.btn').click(function() {
+    alert(widget.model.get('value'));
+});
+</pre>
+                <div class='example pull-left'></div>
+                <a class='btn pull-right'>Get Value</a>
+            </section>
+            
+            <section id='set-value' class='clearfix'>
+                <h3>Set Value</h3>
+                <pre class='prettyprint'>&lt;input class='value' /&gt;
+&lt;button class='btn'&gt;Set Value&lt;/button&gt;</pre>
+                <pre class='prettyprint'>
+$('.btn').click(function() {
+    var val = $('.value').val();
+    widget.model.set('value', val);
+});
+</pre>
+                <div class='example pull-left'></div>
+                <a class='btn pull-right'>Set Value</a><input type='number' class='value pull-right' />
+            </section>
+        </div>
+    </div>
+    
+    <script src='../components/jquery/jquery.js'></script>
+    <script src='../components/underscore/underscore-min.js'></script>
+    <script src='../components/backbone/backbone-min.js'></script>
+    <script src='../components/bootstrap/docs/assets/js/bootstrap.js'></script>
+    
+    <script src='../backbone.sliderbar.js'></script>
+    
+    <script>
+        $(function() {
+            /**
+             * Basic Use
+             */
+            var basicUse = new SliderBar();
+            $('#basic-use .example').html(basicUse.$el);
+            basicUse.render();
+            
+            /**
+             * API Use
+             */
+            
+            /** Get value */
+            var getValue = new SliderBar();
+            $('#get-value .example').html(getValue.$el);
+            getValue.render();
+            
+            $('#get-value .btn').click(function() {
+                alert(getValue.model.get('value'));
+            });
+            
+            /** Set value */
+             var setValue = new SliderBar();
+            $('#set-value .example').html(setValue.$el);
+            setValue.render();
+            
+            $('#set-value .btn').click(function() {
+                var val = $('#set-value .value').val();
+                setValue.model.set('value', val);
+            });
+            
+            
+        });
+    </script>
+</body>
+</html>

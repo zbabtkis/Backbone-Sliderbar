@@ -1,0 +1,93 @@
+.slider-bar {
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: moz-none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.value-bar {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+.slider-bar.vertical {
+    height: 300px;
+    width: 5px;
+}
+.slider-bar.horizontal {
+    height: 5px;
+    width: 300px;
+}
+
+.slider-bar.vertical .value-bar {
+    margin-left: -5px;
+}
+
+.slider-bar.horizontal .value-bar {
+    margin-top: -5px;
+}
+
+.tick {
+    width: 1px;
+    height: 30px;
+    margin-top: -12px;
+    opacity: 0.2;
+}
+
+/** 
+ *Theme green 
+ */
+.theme-green.slider-bar {
+    background: #2c3e50;
+}
+.theme-green .value-bar {
+    background: #2ecc71;
+}
+.theme-green .tick {
+    background: #34495e;
+}
+
+/** 
+ *Theme yellow 
+ */
+.theme-yellow.slider-bar {
+    background: #2c3e50;
+}
+.theme-yellow .value-bar {
+    background: #f1c40f;
+}
+.theme-yellow .tick {
+    background: #34495e;
+}
+
+/** 
+ *Theme red 
+ */
+.theme-red.slider-bar {
+    background: #2c3e50;
+}
+.theme-red .value-bar {
+    background: #e74c3c;
+}
+.theme-red .tick {
+    background: #34495e;
+}
+
+/** 
+ *Theme blue 
+ */
+.theme-blue.slider-bar {
+    background: #2c3e50;
+}
+.theme-blue .value-bar {
+    background: #3498db;
+}
+.theme-blue .tick {
+    background: #34495e;
+}
