@@ -16,6 +16,13 @@
     z-index: 1;
 }
 
+.value-display {
+    position: absolute;
+    margin-top: -15px;
+    background: rgba(255,255,255,0.7);
+    display: none;
+}
+
 .slider-bar.vertical {
     height: 300px;
     width: 5px;
@@ -33,11 +40,20 @@
     margin-top: -5px;
 }
 
-.tick {
+.slider-bar .tick {
+    opacity: 0.4;
+    position: absolute;
+}
+
+.slider-bar.horizontal .tick {
     width: 1px;
-    height: 30px;
-    margin-top: -12px;
-    opacity: 0.2;
+    height: 20px;
+    margin-top: -8px;
+}
+.slider-bar.vertical .tick {
+    width: 20px;
+    height: 1px;
+    margin-left: -8;
 }
 
 /** 
