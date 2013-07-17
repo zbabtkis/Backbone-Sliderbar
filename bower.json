@@ -1,5 +1,5 @@
 {
-  "name": "Backbone Bar",
+  "name": "Backbone-SliderBar",
   "version": "1.0.0",
   "main": "bakbone.sliderbar.js",
   "ignore": [
